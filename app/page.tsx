@@ -15,7 +15,7 @@ export default function Home() {
   const [minPrice, setMinPrice] = useState<number | ''>('');
   const [maxPrice, setMaxPrice] = useState<number | ''>('');
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 10;
+  const productsPerPage = 6;
 
   // Função para buscar produtos da API
   useEffect(() => {
@@ -58,8 +58,8 @@ export default function Home() {
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   return (
-    <main className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Product Store</h1>
+    <main className="max-w-4xl bg-zinc-200 my-5 mx-auto p-6">
+      <h1 className="text-3xl font-bold bg-zinc-600 p-4 text-white rounded-md text-center mb-6">Product Store</h1>
 
       {/* Barra de Pesquisa */}
       <div className="mb-4">
